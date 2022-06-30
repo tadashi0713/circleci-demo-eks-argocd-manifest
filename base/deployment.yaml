@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: circleci-demo-eks-argocd-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: circleci-demo-eks-argocd-app
+  template:
+    metadata:
+      labels:
+        app: circleci-demo-eks-argocd-app
+    spec:
+      containers:
+        - image: circleci-demo-eks-argocd-app
+          name: circleci-demo-eks-argocd-app
+          ports:
+            - containerPort: 80

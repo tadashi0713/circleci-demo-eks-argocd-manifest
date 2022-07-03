@@ -9,4 +9,4 @@ spec:
       targetPort: http
   selector:
     app: circleci-demo-eks-argocd-app
-  type: ClusterIP
+  type: LoadBalancer
